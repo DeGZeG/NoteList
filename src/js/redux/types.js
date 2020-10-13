@@ -1,9 +1,0 @@
-export const ADD_CATEGORY = 'ADD_CATEGORY';
-export const DELETE_CATEGORY = 'DELETE_CATEGORY';
-export const CHANGE_CURRENT_CATEGORY = 'CHANGE_CURRENT_CATEGORY';
-export const ADD_NOTE = 'ADD_NOTE';
-export const DELETE_NOTE = 'DELETE_NOTE';
-export const UPDATE_NOTE = 'UPDATE_NOTE';
-export const UPDATE_SEARCH = 'UPDATE_SEARCH';
-export const SHOW_ALERT = 'SHOW_ALERT';
-export const HIDE_ALERT = 'HIDE_ALERT';

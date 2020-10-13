@@ -7,6 +7,7 @@ function Note({note, content, currentCategory, updateNote, deleteNote}) {
     const [inputs, setInputs] = useState(note.inputs.slice().map(inputs => Object.assign({}, inputs)));
     const [textarea, setTextarea] = useState(note.textarea);
     const [saved, setSaved] = useState(true);
+    const headerRef = useRef(null);
     const bodyRef = useRef(null);
 
     function handleInputsChange(e, inputIndex) {
@@ -40,13 +41,14 @@ function Note({note, content, currentCategory, updateNote, deleteNote}) {
     }
 
     function toggleNoteBody() {
+        headerRef.current.classList.toggle('note__header_opened');
         bodyRef.current.classList.toggle('hide');
     }
 
     return (
         <div className='note'>
-            <div className='note__header'>
-                <p onClick={toggleNoteBody} className='note__name'>{note.noteName}</p>
+            <div ref={headerRef} onClick={toggleNoteBody} className='note__header'>
+                <p className='note__name'>{note.noteName}</p>
                 {
                     !saved && <div onClick={saveButtonHandler} className='note__save-btn save-btn' />
                 }

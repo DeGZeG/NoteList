@@ -266,15 +266,20 @@ body {
   border: 1px solid black;
   border-radius: 10px;
   margin: 15px 5px;
-  padding: 5px;
 
   &__header {
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
+    padding: 5px;
   }
 
   &__body {
+    padding: 5px;
+  }
 
+  &__header_opened {
+    border-bottom: 1px solid black;
   }
 
   &__save-btn {
@@ -284,7 +289,6 @@ body {
   &__name {
     font-weight: bold;
     font-size: 18px;
-    cursor: pointer;
   }
 
   &__input-wrapper {

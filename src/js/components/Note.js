@@ -40,9 +40,11 @@ function Note({note, content, currentCategory, updateNote, deleteNote}) {
         deleteNote(note.id);
     }
 
-    function toggleNoteBody() {
-        headerRef.current.classList.toggle('note__header_opened');
-        bodyRef.current.classList.toggle('hide');
+    function toggleNoteBody(event) {
+        if (!event.target.classList.contains('note__save-btn')) {
+            headerRef.current.classList.toggle('note__header_opened');
+            bodyRef.current.classList.toggle('hide');
+        }
     }
 
     return (
